@@ -1,0 +1,51 @@
+name: Deploy DocC
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - README.md
+      - .gitignore
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: macos-14
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_15.4.app/Contents/Developer
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build DocC
+        run: |
+          $(xcrun --find docc) convert \
+            --transform-for-static-hosting \
+            --hosting-base-path "" \
+            --output-path ./docs \
+            Sources/SwiftUIViewCodingGuidelines/Guidelines.docc
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: "https://cybozu.github.io/swiftui-view-coding-guidelines/documentation/swiftuiviewcodingguidelines/"
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

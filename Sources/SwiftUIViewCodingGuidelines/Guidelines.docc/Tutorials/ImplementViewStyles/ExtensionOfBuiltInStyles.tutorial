@@ -1,0 +1,51 @@
+@Tutorial(time: 5) {
+    @Intro(title: "built-in View Styleを拡張する") {
+        built-in View Styleを拡張して、新しいStyleを定義します。
+    }
+    
+    @Section(title: "CustomButtonStyleを実装") {
+        @ContentAndMedia {
+            `ButtonStyle`に適合する`CustomButtonStyle`を定義します。
+        }
+        
+        @Steps {
+            @Step {
+                `makeBody`を実装します。
+                @Code(name: "CustomButtonStyle.swift", file: ExtensionOfBuiltInStyles-01-code-01.swift)
+            }
+            
+            @Step {
+                `configuration`から`label`を取り出して`makeBody`の中でスタイルを実装します。
+                @Code(name: "CustomButtonStyle.swift", file: ExtensionOfBuiltInStyles-01-code-02.swift)
+            }
+            
+            @Step {
+                `CustomButtonStyle`で`Button`のスタイルが変更できるようになりました。
+                @Code(name: "ContentView.swift", file: ExtensionOfBuiltInStyles-01-code-03.swift)
+            }
+        }
+    }
+    
+    @Section(title: "イニシャライザの代わりに`.custom`で呼び出す") {
+        @ContentAndMedia {
+            `CustomButtonStyle()`の代わりに`.custom`で呼び出せるように拡張します。
+        }
+        
+        @Steps {
+            @Step {
+                `ButtonStyle`に型制約付きでextensionを追加します。
+                @Code(name: "CustomButtonStyle.swift", file: ExtensionOfBuiltInStyles-02-code-01.swift)
+            }
+            
+            @Step {
+                `.custom`プロパティを作成します。
+                @Code(name: "CustomButtonStyle.swift", file: ExtensionOfBuiltInStyles-02-code-02.swift)
+            }
+            
+            @Step {
+                `.custom`で呼び出せるようになりました。
+                @Code(name: "ContentView.swift", file: ExtensionOfBuiltInStyles-02-code-03.swift)
+            }
+        }
+    }
+}

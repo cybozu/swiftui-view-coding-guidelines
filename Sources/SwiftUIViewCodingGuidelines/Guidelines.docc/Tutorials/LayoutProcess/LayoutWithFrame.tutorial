@@ -1,0 +1,22 @@
+@Article(time: 3) {
+    @Intro(title: "Frameのレイアウト") {
+        `.frame`のレイアウトについて学びます。
+    }
+    
+    ### Frameのレイアウト
+    ```swift
+    struct Avocado: View {
+        var body: some View {
+            Image("20x20_avocado")
+                .frame(width: 30, height: 30)
+        }
+    }
+    ```
+    
+    > WWDC19 Building Custom Views with SwiftUI [9:21~](https://developer.apple.com/videos/play/wwdc2019/237/?time=561)
+    
+    このViewは30×30の枠を持っていますが、画像のサイズは20×20のままです。  
+    `.frame`modifierは30×30を子Viewに提案しますが、子Viewである`Image`は固定サイズのままなので、自身のサイズを20×20とします。その結果、画像のサイズは20×20のままになります。  
+    
+    `.frame`modifierはサイズを変更するmodifierではなく、子Viewに提案するサイズを指定できるmodifierであることに注意が必要です。
+}

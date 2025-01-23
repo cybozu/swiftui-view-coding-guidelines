@@ -1,0 +1,21 @@
+@Tutorials(name: "SwiftUI Layout Processes") {
+    @Intro(title: "SwiftUI Layout Processes") {
+        SwiftUIのLayoutプロセスについて学びます。
+        
+    }
+    
+    @Chapter(name: "Layoutプロセスの基礎") {
+        SwiftUIのLayoutプロセスの基礎を学びます。
+        
+        @TutorialReference(tutorial: "doc:LayoutProcessBasics")
+        @TutorialReference(tutorial: "doc:LayoutWithModifiers")
+        @TutorialReference(tutorial: "doc:LayoutWithFrame")
+    }
+        
+    @Resources {
+        more resources
+        @Videos(destination: "https://developer.apple.com/videos/play/wwdc2019/237/") {
+            Building Custom Views with SwiftUI  
+        }
+    }
+}

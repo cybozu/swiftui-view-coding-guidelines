@@ -1,0 +1,31 @@
+@Tutorials(name: "Implement View Styles") {
+    @Intro(title: "Implement View Styles") {
+        built-in View Styleを拡張したり、新たなView Styleを実装する方法を学びます。  
+        このチュートリアルは[\[SwiftUI\] `buttonStyle`を支える技術](https://zenn.dev/en3_hcl/articles/f8eabadaa966eb)にインスパイアされて作成されました。
+    }
+    
+    @Chapter(name: "Extension of Built-in Styles") {
+        built-in View Styleを拡張して、標準コンポーネントのスタイルを変更する方法を学びます。
+        
+        @TutorialReference(tutorial: "doc:ExtensionOfBuiltInStyles")
+    }
+    
+    @Chapter(name: "Implement Custom View Style") {
+        自作のViewに対してView Styleを実装し、スタイルを変更する方法を学びます。
+        
+        @TutorialReference(tutorial: "doc:ImplementCustomViewStyle")
+    }
+
+    @Resources {
+        More Resources
+
+        @Documentation(destination: "https://github.com/cybozu/swiftui-view-coding-guidelines") {
+            `Style`を実現する技術的な解説は以下を参照してください。
+            - [\[SwiftUI\] `buttonStyle`を支える技術](https://zenn.dev/en3_hcl/articles/f8eabadaa966eb)
+
+            関連
+            - <doc:SeparatingStylingResponsibilities>
+
+        }
+    }
+}

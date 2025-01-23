@@ -1,0 +1,94 @@
+@Tutorial(time: 10) {
+    @Intro(title: "自作のView Styleを実装する") {
+        自作のView Styleを実装します。
+    }
+    
+    @Section(title: "StyleとConfigurationを定義する") {
+        @ContentAndMedia {
+            自作のViewにオリジナルのStyleを定義します。
+        }
+        
+        @Steps {
+            @Step {
+                `FruitLabel`を用意します。まだStyleはありません。
+                
+                @Code(name: "FruitLabel.swift", file: ImplementCustomViewStyle-01-01.swift)
+            }
+            
+            @Step {
+                `Style`と`Configuration`を定義します。
+                
+                @Code(name: "FruitLabelStyle.swift", file: ImplementCustomViewStyle-01-02.swift)
+            }
+            
+            @Step {
+                デフォルトの`Style`を定義します。
+                
+                @Code(name: "DefaultFruitLabelStyle.swift", file: ImplementCustomViewStyle-01-03.swift)
+            }
+        }
+    }
+    
+    @Section(title: "定義したStyleを適用可能にする") {
+        @ContentAndMedia {
+            定義したStyleを適用して、Viewのスタイルを変更できるようにします。
+        }
+        
+        @Steps {
+            @Step {
+                `FruitLabel`にStyleを当てられるように変更します。
+                
+                @Code(name: "FruitLabel.swift", file: ImplementCustomViewStyle-02-01.swift)
+                
+                このままでは`any View`が`View`に適合していないため、コンパイルエラーとなります。
+            }
+            
+            @Step {
+                コンパイルエラーを解消するため、`AnyView`を利用します。
+                
+                @Code(name: "FruitLabel.swift", file: ImplementCustomViewStyle-02-02.swift)
+                
+                これでStyleが適用可能になりました。
+            }
+            
+            @Step {
+                modifierでStyleを適用できるように`extension`を定義します。
+                
+                @Code(name: "FruitLabel+fruitLabelStyle.swift", file: ImplementCustomViewStyle-02-03.swift)
+            }
+        }
+    }
+    
+    @Section(title: "定義したStyleの呼び出しを簡潔にする") {
+        @ContentAndMedia {
+            定義したStyleを簡潔に呼び出せるようにします。
+        }
+        
+        @Steps {
+            @Step {
+                `.default`で呼び出せるように`extension`を用意します。
+                
+                @Code(name: "DefaultFruitLabelStyle.swift", file: ImplementCustomViewStyle-03-01.swift)
+            }
+            
+            @Step {
+                `FruitLabel`のイニシャライザから`style`を渡さずに指定可能にします。
+                `EnvironmentValues`に新しく`FruitLabelStyle`の値を定義します。
+                
+                @Code(name: "EnvironmentValues+fruitLabelStyle.swift", file: ImplementCustomViewStyle-03-02.swift)
+            }
+            
+            @Step {
+                `FruitLabel`では`@Environment`でこの値を利用します。
+                
+                @Code(name: "FruitLabel.swift", file: ImplementCustomViewStyle-03-03.swift)
+            }
+            
+            @Step {   
+                併せて`FruitLabel`の`extension`も変更します。
+                
+                @Code(name: "FruitLabel+fruitLabelStyle.swift", file: ImplementCustomViewStyle-03-04.swift)
+            }
+        }
+    }
+}

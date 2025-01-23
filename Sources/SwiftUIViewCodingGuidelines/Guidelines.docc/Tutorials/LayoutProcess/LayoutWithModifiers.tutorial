@@ -1,0 +1,28 @@
+@Article(time: 5) {
+    @Intro(title: "ModifierとLayoutプロセス") {
+        `.padding`や`.background`といったmodifierが付与されたViewがどのようにレイアウトを決定するか学びます。
+    }
+    
+    ## ModifierとLayoutプロセス
+    以下のViewのLayoutプロセスを見てみます。
+    
+    ```swift
+    struct Toast: View {
+        var body: some View {
+            Text("Avocado Toast")
+                .padding(10)
+                .background(Color.green)
+        }
+    }
+    ```
+    
+    > WWDC19 Building Custom Views with SwiftUI [7:14~](https://developer.apple.com/videos/play/wwdc2019/237/?time=434)
+    
+    1. まずRootViewは全体のサイズをbackground viewに提案します。  
+    2. background viewはlayout neutralなため、提案されたサイズをそのままpadding viewに渡します。  
+    3. padding viewは子Viewに10ポイント追加されることを知っているので、その分だけ少ないサイズをTextに提供します。  
+    4. Textは受け取ったサイズをもとに自身のサイズを決定して、padding viewに返します。  
+    5. padding viewは子Viewより10ポイントずつ大きくなるべきと知っているので、大きくした座標空間にTextを配置します。  
+    6. background viewはlayout neutralなので、padding viewから受け取ったサイズをそのまま上に通知しますが、その前にもう一つの子ViewであるColorに通知します。Colorは提案されたサイズまで広がるので、padding viewと同じサイズになります。
+    7. 最後にbackground viewはRootViewにサイズを報告して、RootViewが中央に配置します。
+}
