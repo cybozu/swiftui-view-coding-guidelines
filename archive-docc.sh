@@ -11,5 +11,4 @@ $DOCC_COMMAND convert Guide.docc \
 
 $DOCC_COMMAND process-archive transform-for-static-hosting \
   $DOCC_ARCHIVE \
-  --hosting-base-path swiftui-view-coding-guidelines \
   --output-path ./docs \
