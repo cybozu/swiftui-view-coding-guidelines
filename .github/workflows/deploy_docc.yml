@@ -24,11 +24,7 @@ jobs:
 
       - name: Build DocC
         run: |
-          $(xcrun --find docc) convert \
-            --transform-for-static-hosting \
-            --hosting-base-path SwiftUIViewCodingGuidelines \
-            --output-path ./docs \
-            Sources/SwiftUIViewCodingGuidelines/Guidelines.docc
+          ./archive-docc.sh
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
