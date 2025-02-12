@@ -39,7 +39,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: "https://cybozu.github.io/swiftui-view-coding-guidelines/documentation/swiftuiviewcodingguidelines/"
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
