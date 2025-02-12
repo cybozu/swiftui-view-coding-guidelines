@@ -10,5 +10,5 @@ $DOCC_COMMAND convert Guide.docc \
   --output-dir $DOCC_ARCHIVE
 
 $DOCC_COMMAND process-archive transform-for-static-hosting \
-  $DOCC_ARCHIVE \
   --output-path ./docs \
+  $DOCC_ARCHIVE

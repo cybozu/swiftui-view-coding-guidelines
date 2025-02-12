@@ -24,7 +24,15 @@ jobs:
 
       - name: Build DocC
         run: |
-          ./archive-docc.sh
+          $(xcrun --find docc) convert \
+            --hosting-base-path "" \
+            --output-path Target.doccarchive \
+            Guide.docc
+
+          $(xcrun --find docc) process-archive transform-for-static-hosting \
+            Target.doccarchive \
+            --hosting-base-path "" \
+            --output-path ./docs
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
