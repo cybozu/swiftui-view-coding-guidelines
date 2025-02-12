@@ -25,13 +25,13 @@ jobs:
       - name: Build DocC
         run: |
           $(xcrun --find docc) convert \
-            --hosting-base-path "" \
+            --hosting-base-path /swiftui-view-coding-guidelines \
             --output-path Target.doccarchive \
             Guide.docc
 
           $(xcrun --find docc) process-archive transform-for-static-hosting \
             Target.doccarchive \
-            --hosting-base-path "" \
+            --hosting-base-path /swiftui-view-coding-guidelines \
             --output-path ./docs
 
       - name: Upload artifact
