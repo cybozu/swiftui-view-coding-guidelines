@@ -8,8 +8,8 @@ $DOCC_COMMAND convert Guide.docc \
   --fallback-bundle-identifier org.cybozu.SwiftUIViewCodingGuidelines \
   --fallback-bundle-version 1 \
   --output-dir $DOCC_ARCHIVE
-  --hosting-base-path swiftui-view-coding-guidelines
 
 $DOCC_COMMAND process-archive transform-for-static-hosting \
+  $DOCC_ARCHIVE \
+  --hosting-base-path swiftui-view-coding-guidelines \
   --output-path ./docs \
-  $DOCC_ARCHIVE
