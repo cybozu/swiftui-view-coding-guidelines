@@ -1,7 +1,7 @@
 #/usr/bin/env bash -euo pipefail
 
 DOCC_COMMAND="/usr/bin/xcrun docc"
-DOCC_ARCHIVE="Guidelines.doccarchive"
+DOCC_ARCHIVE="Guide.doccarchive"
 
 $DOCC_COMMAND convert Guidelines.docc \
   --fallback-display-name SwiftUIViewCodingGuidelines \
