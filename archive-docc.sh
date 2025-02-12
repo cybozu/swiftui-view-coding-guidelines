@@ -3,7 +3,7 @@
 DOCC_COMMAND="/usr/bin/xcrun docc"
 DOCC_ARCHIVE="Guidelines.doccarchive"
 
-$DOCC_COMMAND convert ./Sources/SwiftUIViewCodingGuidelines/Guidelines.docc \
+$DOCC_COMMAND convert Guidelines.docc \
   --fallback-display-name SwiftUIViewCodingGuidelines \
   --fallback-bundle-identifier org.cybozu.SwiftUIViewCodingGuidelines \
   --fallback-bundle-version 1 \
