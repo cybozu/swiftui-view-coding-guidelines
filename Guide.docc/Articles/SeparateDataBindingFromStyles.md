@@ -66,7 +66,7 @@ struct FlavorSelectSection: View {
 }
 ```
 
-これにより、同じスタイルを異なるの型のデータを使ったPickerにも同じスタイルを適用できます。
+これにより、同じスタイルを異なる型のデータを使ったPickerにも同じスタイルを適用できます。
 
 ```swift
 enum Topping: String, CaseIterable, Identifiable {
