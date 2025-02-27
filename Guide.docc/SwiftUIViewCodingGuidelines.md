@@ -41,6 +41,7 @@
 - <doc:ChangeValueWhenSwitchingStyle>
 - <doc:HideViewWithOpacityWhenAvailable>
 - <doc:AssignUniqueValueToForEachID>
+- <doc:MakeInitializerLowCost>
 
 ### The Art of API Design
 - <doc:ProvidesContainerViewAccessViaProxy>
