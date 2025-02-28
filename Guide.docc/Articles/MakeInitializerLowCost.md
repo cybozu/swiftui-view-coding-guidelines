@@ -29,5 +29,28 @@ struct DogRootView: View {
 この例では`DogRootView`のイニシャライザで`FetchModel`がイニシャライズされます。  
 `FetchModel`のイニシャライザで処理に時間のかかる`fetchDogs`が同期的に呼び出されているため、`DogRootView`のイニシャライザが高コストとなっています。
 
-### `.task`でイニシャライザのコストを下げる
-xxx
+### task modifierでイニシャライザのコストを下げる
+この場合は、`fetchDogs`を`async`にし、`.task`で非同期にデータを読み込むことでイニシャライザを低コストにします。
+
+```swift
+struct DogRootView: View {
+  @State private var model = FetchModel()
+
+  var body: some View {
+    DogList(model.dogs)
+      .task { await model.fetchDogs() }
+  }
+}
+
+@Observable class FetchModel {
+  var dogs: [Dog]
+
+  init() { }
+
+  func fetchDogs() async {
+    // Takes a long time
+  }
+}
+```
+
+> WWDC23 Demystify SwiftUI performance [12:20~](https://developer.apple.com/videos/play/wwdc2023/10160/?time=740)
