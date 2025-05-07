@@ -23,6 +23,11 @@
 [repository]: https://github.com/cybozu/swiftui-view-coding-guidelines
 [Discussions]: https://github.com/cybozu/swiftui-view-coding-guidelines/discussions
 
+## New and updated
+@Links(visualStyle: compactGrid) {
+    - <doc:ProvideModifierWithParameter>
+}
+
 ## SwiftUI Basics
 @Links(visualStyle: detailedGrid) {
     - <doc:WhatISViewIdentity>
