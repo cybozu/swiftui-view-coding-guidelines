@@ -43,3 +43,6 @@ struct ContentView: View {
     }
 }
 ```
+
+## See Also
+- <doc:WhatISViewIdentity>
