@@ -45,6 +45,7 @@
 
 ### The Art of API Design
 - <doc:ProvidesContainerViewAccessViaProxy>
+- <doc:ProvideModifierWithParameter>
 
 ### Key priciples of the User Interface
 - <doc:UserOwnsTheirInput>
