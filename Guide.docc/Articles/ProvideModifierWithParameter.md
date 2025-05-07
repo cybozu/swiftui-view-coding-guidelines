@@ -13,12 +13,16 @@ SwiftUIでは、条件に応じてViewの見た目や振る舞いを変更する
 引数のないmodifierを条件分岐によって切り替えるには、`if`文を使用する必要があります：
 
 ```swift
-
 struct ContentView: View {
     @State var condition = false
 
     var body: some View {
-        xxx
+        if condition {
+            Text("nice")
+                .nicelyStyled()
+        } else {
+            Text("nice")
+        }
     }
 }
 ```
@@ -30,5 +34,12 @@ struct ContentView: View {
 引数を持つmodifierを提供すると、条件分岐を引数に移動することで同一のView identityで表現できます：
 
 ```swift
-xxx
+struct ContentView: View {
+    @State var condition = false
+
+    var body: some View {
+        Text("nice")
+            .textStyle(condition ? .nicely : .primary)
+    }
+}
 ```
