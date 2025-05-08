@@ -1,5 +1,9 @@
 # 引数を持つmodifierを提供する
 
+@Metadata {
+    @PageImage(purpose: card, source: "ProvideModifierWithParameterPageImage")
+}
+
 引数内で状態の条件分岐を記述できるよう、引数を持つmodifierを提供します。
 
 ## Overview
