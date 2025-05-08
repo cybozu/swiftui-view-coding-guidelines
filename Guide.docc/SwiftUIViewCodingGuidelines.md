@@ -28,7 +28,7 @@
     - <doc:ProvideModifierWithParameter>
 }
 
-## SwiftUI Basics
+## SwiftUI Fundamentals
 @Links(visualStyle: detailedGrid) {
     - <doc:WhatISViewIdentity>
     - <doc:ViewValuesAreEphemeral>
