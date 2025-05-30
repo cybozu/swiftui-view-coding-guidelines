@@ -2,6 +2,7 @@
 
 @Metadata {
     @PageImage(purpose: card, source: "ProvideModifierWithParameterPageImage")
+    @PageImage(purpose: icon, source: "parentheses")
 }
 
 引数内で状態の条件分岐を記述できるよう、引数を持つmodifierを提供します。
@@ -14,7 +15,7 @@ SwiftUIでは、条件に応じてViewの見た目や振る舞いを変更する
 
 ### 引数のないmodifierの問題点
 
-引数のないmodifierを条件分岐によって切り替えるには、`if`文を使用する必要があります：
+引数のないmodifierを条件分岐によって切り替えるには、`if`文を使用する必要があります。
 
 ```swift
 struct ContentView: View {
@@ -35,7 +36,7 @@ struct ContentView: View {
 
 ### 条件分岐をmodifierの引数に移動する
 
-引数を持つmodifierを提供すると、条件分岐を引数に移動することで同一のView identityで表現できます：
+引数を持つmodifierを提供すると、条件分岐を引数に移動することで同一のView identityで表現できます。
 
 ```swift
 struct ContentView: View {
