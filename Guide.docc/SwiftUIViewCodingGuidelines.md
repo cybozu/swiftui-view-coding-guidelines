@@ -25,6 +25,7 @@
 
 ## New and updated
 @Links(visualStyle: compactGrid) {
+    - <doc:ContentUnavailableViewExtensions>
     - <doc:ProvideModifierWithParameter>
 }
 
@@ -49,6 +50,7 @@
 - <doc:MakeInitializerLowCost>
 
 ### The Art of API Design
+- <doc:ContentUnavailableViewExtensions>
 - <doc:ProvidesContainerViewAccessViaProxy>
 - <doc:ProvideModifierWithParameter>
 
