@@ -6,7 +6,7 @@
 `ContentUnavailableView`はコンテンツが利用できない場合に表示するビューを提供します。  
 `ContentUnavailableView`には型パラメータがあるため、`extension`で`static`なプロパティやメソッドを追加する場合にはconcreteな型を確定させるために少し工夫が必要です。
 
-## `ContentUnavailableView`の拡張
+## ContentUnavailableViewの拡張
 受信メールの一覧が空の場合を表現するために`ContentUnavailableView`を拡張する例を見てみましょう。
 `MailListUnavailableContent`という型を定義し、`ContentUnavailableView`の型パラメータに対応する型エイリアスを追加します。
 
