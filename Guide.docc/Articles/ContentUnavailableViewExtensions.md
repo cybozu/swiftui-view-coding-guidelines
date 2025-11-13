@@ -13,7 +13,7 @@
 ```swift
 public struct MailListUnavailableContent {
     public typealias Label = SwiftUI.Label<Text, Image>
-    public typealias Description = Text
+    public typealias Description = Text?
     public typealias Actions = EmptyView
 }
 ```
@@ -23,7 +23,7 @@ public struct MailListUnavailableContent {
 ```swift
 public struct MailListUnavailableContent {
     public typealias Label = SwiftUI.Label<Text, Image>
-    public typealias Description = Text
+    public typealias Description = Text?
     public typealias Actions = EmptyView
 }
 
