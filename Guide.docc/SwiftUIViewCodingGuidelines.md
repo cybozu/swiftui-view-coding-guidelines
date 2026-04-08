@@ -62,6 +62,7 @@
 ## Topics
 ### Separate Responsibilities
 - <doc:SeparatingStylingResponsibilities>
+- <doc:UseLabelForSemanticLabeling>
 - <doc:SeparateDataBindingFromStyles>
 - <doc:SeparateContentUnavailableCases>
 - <doc:SpacingIsManagedByParentComponent>
