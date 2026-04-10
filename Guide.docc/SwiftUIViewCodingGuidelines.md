@@ -41,8 +41,8 @@
 
 ## New and updated
 @Links(visualStyle: compactGrid) {
+    - <doc:UseLabelForSemanticLabeling>
     - <doc:ContentUnavailableViewExtensions>
-    - <doc:ProvideModifierWithParameter>
 }
 
 ## SwiftUI Fundamentals
