@@ -41,6 +41,7 @@
 
 ## New and updated
 @Links(visualStyle: compactGrid) {
+    - <doc:UseScaledMetric>
     - <doc:UseLabelForSemanticLabeling>
     - <doc:ContentUnavailableViewExtensions>
 }
@@ -80,6 +81,9 @@
 
 ### Key priciples of the User Interface
 - <doc:UserOwnsTheirInput>
+
+### Accessibility
+- <doc:UseScaledMetric>
 
 ### View debugging
 - <doc:SendViewUpdatesToConsole>
