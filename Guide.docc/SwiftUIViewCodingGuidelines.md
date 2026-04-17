@@ -58,6 +58,9 @@
 ### Key priciples of the User Interface
 - <doc:UserOwnsTheirInput>
 
+### Accessibility
+- <doc:UseScaledMetric>
+
 ### View debugging
 - <doc:SendViewUpdatesToConsole>
 
