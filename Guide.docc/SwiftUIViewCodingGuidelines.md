@@ -25,6 +25,7 @@
 
 ## New and updated
 @Links(visualStyle: compactGrid) {
+    - <doc:UseScaledMetric>
     - <doc:ContentUnavailableViewExtensions>
     - <doc:ProvideModifierWithParameter>
 }
